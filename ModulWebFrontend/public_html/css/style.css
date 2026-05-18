@@ -1,0 +1,202 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 11 May 2026, 10.44.07
+    Author     : HP VICTUS
+*/
+
+/* 
+   GLOBAL → berlaku untuk seluruh halaman
+*/
+body {
+    font-family: Arial, sans-serif; /* jenis font */
+    background-color: #f0f0f0;      /* warna background abu-abu muda */
+    color: #333333;                 /* warna teks gelap */
+    margin: 20px;                   /* jarak dari tepi browser */
+    padding: 0;
+}
+
+/* 
+   HEADING → styling judul
+ */
+h1 {
+    text-align: center;             /* rata tengah */
+    color: #2c3e50;                 /* warna teks gelap */
+    font-size: 36px;
+}
+
+h2 {
+    text-align: left;               /* rata kiri */
+    color: #e74c3c;                 /* warna merah */
+    border-bottom: 2px solid #e74c3c; /* garis bawah */
+    padding-bottom: 5px;
+}
+
+h3 {
+    text-align: right;              /* rata kanan */
+    color: #3498db;                 /* warna biru */
+}
+
+/* 
+   PARAGRAF
+*/
+p {
+    font-size: 16px;
+    line-height: 1.6;               /* jarak antar baris */
+    text-align: justify;            /* rata kanan-kiri */
+}
+
+/* 
+   HYPERLINK → styling link
+*/
+a {
+    color: #3498db;
+    text-decoration: none;          /* hilangkan garis bawah default */
+}
+
+a:hover {                           /* saat mouse di atas link */
+    color: #e74c3c;
+    text-decoration: underline;     /* munculkan garis bawah saat hover */
+}
+
+/* 
+   TABEL → styling tabel
+*/
+table {
+    width: 80%;
+    border-collapse: collapse;      /* hilangkan gap antar border */
+    margin: 10px 0;
+    background-color: white;
+}
+
+th {
+    background-color: #2c3e50;      /* header tabel warna gelap */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+td {
+    padding: 8px 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+/* baris genap warna berbeda (zebra stripes) */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* efek hover pada baris tabel */
+tr:hover {
+    background-color: #d5e8f8;
+}
+
+/* 
+   LIST → styling daftar
+*/
+ul {
+    list-style-type: square;        /* simbol kotak */
+    background-color: #eaf4fb;
+    padding: 10px 30px;
+}
+
+ol {
+    list-style-type: decimal;       /* angka 1,2,3 */
+    background-color: #fef9e7;
+    padding: 10px 30px;
+}
+
+li {
+    padding: 5px 0;
+    font-size: 15px;
+}
+
+/* 
+   FORM → styling form input
+*/
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;             /* sudut membulat */
+    width: 50%;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1); /* bayangan */
+}
+
+label {
+    font-weight: bold;              /* teks tebal */
+    color: #2c3e50;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* efek saat input sedang diklik/fokus */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 4px rgba(52,152,219,0.5);
+}
+
+/* 
+   BUTTON → styling tombol
+*/
+button[type="submit"] {
+    background-color: #27ae60;      /* hijau */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;                /* kursor tangan saat hover */
+    font-size: 14px;
+}
+
+button[type="submit"]:hover {
+    background-color: #1e8449;      /* hijau lebih gelap saat hover */
+}
+
+button[type="reset"] {
+    background-color: #e74c3c;      /* merah */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+button[type="reset"]:hover {
+    background-color: #c0392b;
+}
+
+/* 
+   SELECTOR ID & CLASS → contoh penggunaan
+   id    → #namaId   (hanya 1 elemen)
+   class → .namaClass (bisa banyak elemen)
+*/
+#judul-utama {
+    color: #8e44ad;                 /* ungu */
+    font-size: 40px;
+}
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+    padding: 2px 5px;
+}

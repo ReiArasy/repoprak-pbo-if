@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar HTML - PBO Informatika</title>
+    <!-- Hubungkan ke file CSS eksternal -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- 
+         HEADING → judul dengan 6 tingkatan
+         h1 paling besar, h6 paling kecil
+    -->
+    <h1>Heading 1 - Paling Besar</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6 - Paling Kecil</h6>
+
+    <!-- 
+         PARAGRAF & TEKS
+     -->
+    <p>Ini adalah paragraf biasa.</p>
+    <p>Teks <strong>tebal</strong> dan teks <em>miring</em>.</p>
+    <p>Pindah baris tanpa paragraf baru:<br>Ini baris kedua.</p>
+
+    <!-- 
+         HYPERLINK → pindah ke halaman lain
+         href = alamat tujuan
+         target="_blank" = buka di tab baru
+    -->
+        a href="https://www.telkomuniversity.ac.id" target="_blank">
+        Kunjungi Telkom University
+    </a>
+
+    <hr> <!-- garis pemisah horizontal -->
+
+    <!-- 
+         TABEL → tampilkan data berbentuk tabel
+         table  = wadah tabel
+         tr     = baris (table row)
+         th     = header kolom (tebal & tengah)
+         td     = isi kolom (table data)
+         border = garis tabel
+     -->
+    <h2>Tabel Mahasiswa</h2>
+    <table border="1" width="100">
+        <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Kota</th>
+            <th>Nilai</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Budi</td>
+            <td>Jakarta</td>
+            <td>85</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Siti</td>
+            <td>Bandung</td>
+            <td>92</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Andi</td>
+            <td>Surabaya</td>
+            <td>78</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <!-- TABEL DENGAN MERGE CELL
+         colspan = gabung kolom (ke kanan)
+         rowspan = gabung baris (ke bawah)
+     -->
+    <h2>Tabel dengan Merge Cell</h2>
+    <table border="1">
+        <tr>
+            <!-- rowspan="2" → sel ini menempati 2 baris -->
+            <th rowspan="2">Nama</th>
+            <!-- colspan="2" → sel ini menempati 2 kolom -->
+            <th colspan="2">Nilai</th>
+        </tr>
+        <tr>
+            <th>UTS</th>
+            <th>UAS</th>
+        </tr>
+        <tr>
+            <td>Budi</td>
+            <td>80</td>
+            <td>85</td>
+        </tr>
+        <tr>
+            <td>Siti</td>
+            <td>90</td>
+            <td>92</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <!-- 
+         LIST → daftar item
+         ul = unordered list (pakai simbol •)
+         ol = ordered list (pakai angka 1,2,3)
+         li = setiap item dalam list
+     -->
+    <h2>List</h2>
+
+    <h3>Unordered List (ul)</h3>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+     <h3>Ordered List (ol)</h3>
+    <ol>
+        <li>Buka browser</li>
+        <li>Ketik alamat web</li>
+        <li>Tekan Enter</li>
+    </ol>
+
+    <hr>
+
+    <!-- 
+         FORM → kumpulkan input dari pengguna
+         action = kemana data dikirim
+         method = cara kirim (POST/GET)
+     -->
+    <h2>Form Pendaftaran</h2>
+    <form action="#" method="POST">
+
+        <!-- Input teks biasa -->
+        <label for="nama">Nama:</label><br>
+        <input type="text" id="nama" name="nama"
+               placeholder="Masukkan nama kamu"><br><br>
+
+        <!-- Input email -->
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"
+               placeholder="Masukkan email kamu"><br><br>
+
+        <!-- Input password (teks tersembunyi) -->
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"
+               placeholder="Masukkan password"><br><br>
+
+        <!-- Radio button → pilih salah satu -->
+        <label>Jenis Kelamin:</label><br>
+        <!-- name harus sama agar hanya 1 yang dipilih -->
+        <input type="radio" name="jk" value="pria" id="pria">
+        <label for="pria">Pria</label>
+        <input type="radio" name="jk" value="wanita" id="wanita">
+        <label for="wanita">Wanita</label><br><br>
+
+        <!-- Checkbox → boleh pilih banyak -->
+        <label>Hobi:</label><br>
+        <input type="checkbox" name="hobi" value="baca" id="baca">
+        <label for="baca">Membaca</label>
+        <input type="checkbox" name="hobi" value="coding" id="coding">
+        <label for="coding">Coding</label>
+        <input type="checkbox" name="hobi" value="musik" id="musik">
+        <label for="musik">Musik</label><br><br>
+
+        <!-- Dropdown select -->
+        <label for="jurusan">Jurusan:</label><br>
+        <select id="jurusan" name="jurusan">
+            <option value="">-- Pilih Jurusan --</option>
+            <option value="if">Informatika</option>
+            <option value="si">Sistem Informasi</option>
+            <option value="ti">Teknik Informatika</option>
+        </select><br><br>
+
+        <!-- Textarea → input teks panjang -->
+        <label for="pesan">Pesan:</label><br>
+        <textarea id="pesan" name="pesan"
+                  rows="4" cols="40"
+                  placeholder="Tulis pesan kamu..."></textarea><br><br>
+
+        <!-- Tombol submit dan reset -->
+        <button type="submit">Kirim</button>
+        <button type="reset">Reset</button>
+
+    </form>
+
+    <!-- Hubungkan ke file JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
